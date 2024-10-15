@@ -1,0 +1,195 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 45px;
+    background-color: rgba(10, 127, 2, 0.759);
+}
+
+.menu {
+    text-decoration: none;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu li {
+    position: relative;
+    color: white;
+}
+
+.menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 25px;
+    color: rgb(2, 2, 2);
+    text-decoration: none;
+}
+
+.menu li:hover {
+    background-color: rgba(27, 242, 12, 0.759);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu .sub_li {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+    background-color: rgba(10, 127, 2, 0.759);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+.menu .sub_li ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu .sub_li ul li {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
+.menu .sub_li ul li:last-child {
+    border-bottom: none;
+}
+
+.menu li:hover > .sub_li {
+    display: flex;
+}
+
+.menu .sub_li_1 {
+    position: absolute;
+    top: 5px;
+    left: 100%;
+    width: 120px;
+    background-color: rgba(10, 127, 2, 0.759);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.menu .sub_li_1 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu .sub_li_1 ul li {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
+.menu .sub_li_1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu .sub_li ul li:hover .sub_li_1 {
+    display: flex;
+}
+
+
+
+
+
+.hero {
+    height: 90vh;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero button {
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    border: none;
+  }
+  
+  .hero .menu,
+  .hero .menu::before,
+  .hero .menu::after {
+    width: 48px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: black;
+    position: absolute;
+  }
+  
+  .hero .menu::before,
+  .hero .menu::after {
+    content: "";
+  }
+  
+  .hero .menu::before {
+    transform: translate(0px, -12px) rotate(0deg);
+    transition: all 0.5s;
+  }
+  
+  .hero .menu::after {
+    transform: translate(0px, 12px) rotate(0deg);
+    transition: all 0.5s;
+  }
+  
+  .hero button:hover {
+    animation: rotate1 .5s linear infinite;
+  }
+  
+  .hero button:hover .menu {
+    background-color: transparent;
+  }
+  
+  .hero button:hover .menu::before {
+    transform: translateX(0px) rotate(45deg);
+    transition: all 0.5s;
+  }
+  
+  .hero button:hover .menu::after {
+    transform: translateX(0px) rotate(-45deg);
+    transition: all 0.5s;
+  }
+  
+  @keyframes rotate1 {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
