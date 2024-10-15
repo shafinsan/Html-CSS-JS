@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    object-fit: cover;
+}
+@media(min-aspect-ratio:16/9){
+    video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    video{
+        width: auto;
+        height: 100%;
+    }
+}

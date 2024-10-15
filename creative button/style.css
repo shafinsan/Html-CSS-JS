@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 70%;
+    height: 40%;
+    border: 2px solid white;
+    box-shadow: 0px 1px 60px -17px white;
+}
+
+.button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.button li {
+    padding: 1rem 1.5rem;
+    color: white;
+    list-style: none;
+    margin: 10px;
+
+}
+
+
+/* **********************************BTN1********************************************** */
+.btn1 {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(34, 29, 29);
+}
+
+.btn1::before {
+    text-align: center;
+    content: "Download";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 61, 61, 0.541);
+    top: 0;
+    left: 0;
+    transform-origin: top;
+    transform: translateY(-100%);
+    transition: 0.5s;
+}
+
+.btn1:hover::before {
+    transform: translateY(0);
+}
+
+.btn1:hover {
+    color: rgba(255, 255, 255, 0);
+}
+
+/* **********************************BTN1********************************************** */
+
+/* **********************************BTN2********************************************** */
+.btn2 {
+    position: relative;
+    background-color: rgb(34, 29, 29);
+}
+
+.btn2::before,
+.btn2::after {
+    content: "Thank You";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99.5%;
+    height: 100%;
+    transform-origin: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: rotateX(270deg);
+    background-color: rgba(59, 64, 64, 0.514);
+    transition: all 1s;
+}
+
+.btn2::after {
+    content: "Welcome";
+    background-color: rgb(73, 138, 138);
+    transition: all 1s;
+    transition-delay: 1s;
+}
+
+.btn2:hover::before,
+.btn2:hover::after {
+    transform: rotateX(0);
+}
+.btn2:hover {
+    color: rgba(255, 255, 255, 0);
+}
+
+/* **********************************BTN2********************************************** */
+
+/* **********************************BTN3********************************************** */
+.btn3 {
+    position: relative;
+    z-index: 1;
+}
+
+.btn3::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgb(199, 247, 6);
+    mix-blend-mode: multiply;
+    transform-origin: top;
+    transition: all 1s;
+}
+
+.btn3::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgb(31, 233, 199);
+    mix-blend-mode: multiply;
+    transform-origin: bottom;
+    transition: all 1s;
+}
+
+.btn3:hover::before {
+    top: -6px;
+    left: 0px;
+    transform: perspective(10000px) rotateX(-75deg);
+}
+
+.btn3:hover::after {
+    top: 6px;
+    left: 0px;
+    transform: perspective(10000px) rotateX(75deg);
+}
+
+.btn3:hover {
+    border: none;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, rgba(119, 125, 144, 0.493), rgba(15, 15, 14, 0.438));
+}
+
+/* **********************************BTN3********************************************** */
+/* **********************************BTN4********************************************** */
+.btn4 {
+    position: relative;
+    background-color: rgb(34, 29, 29);
+}
+
+.btn4::before,
+.btn4::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    transition: all 1s;
+}
+
+.btn4::before {
+    top: -4px;
+    left: -4px;
+    border-top: 4px solid red;
+    border-left: 4px solid red;
+}
+
+.btn4::after {
+    bottom: -4px;
+    right: -4px;
+    border-bottom: 4px solid red;
+    border-right: 4px solid red;
+}
+
+.btn4:hover::before,
+.btn4:hover::after {
+    width: 103.5%;
+    height: 104%;
+}
+
+.btn4:hover {
+    color: white;
+}
+
+/* **********************************BTN4********************************************** */
+/* **********************************BTN5********************************************** */
+.btn5{
+    position: relative;
+    background-color: rgb(72, 57, 57);
+    border-radius: 100px;
+    color: rgb(0, 0, 0);
+    
+}
+.btn5::before{
+    content: "Hi";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: black;
+    border-radius: 100px;
+    background-color: white;
+    border-radius: 100px;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    z-index: auto;
+    align-items: center;
+}
+.btn5:hover::before{
+    box-shadow: 0px 0px 0px 30px rgb(244, 242, 242);
+    opacity: 0;
+}
+
+/* **********************************BTN5********************************************** */

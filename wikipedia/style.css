@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(62, 62, 62);
+    display: flex;
+    justify-content: center;
+}
+.contaier{
+    width: 60%;
+    padding: 5rem;
+    background-color: rgba(0, 0, 0, 0.778);
+    box-shadow: 0px 0px 12px 5px black;
+}
+.contaier.active{
+    background: transparent;
+}
+.search_wikipedia{
+    
+    display: flex;
+    font-family: sans-serif;
+    justify-content: space-around;
+    align-items: center;
+}
+.wikipedia{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: bolder;
+}
+.btn1{
+    width: 60px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    height: 30px;
+    border-radius: 14px;
+    background-color: white;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+.btn1.active{
+    transform: translateX(30px);
+}
+.form{
+    width: 78%;
+    position: relative;
+    top: 24px;
+    margin-top: 2rem;
+    margin: auto;
+}
+input{
+    width: 100%;
+    height: 35px;
+    border-radius: 2px;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: yellow;
+}
+.fa{
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translate(0,-50%);
+    font-size: 1.5rem;
+    color: white;
+}
+.fa:active{
+    scale: 0.98;
+}
+.result{
+    margin-top: 100px;
+}
+.result_container{
+    padding: 15px;
+    margin: 7px;
+    background-color: rgba(33, 33, 34, 0.738);
+    box-shadow: 0px 0px 10px 4px black;
+}
+.heading{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+.p{
+    margin-bottom: 8px;
+   
+}
+.para{
+    font-size: 1rem;
+    color: rgb(0, 17, 255);
+    text-decoration: none;
+    font-family: sans-serif;
+    border-bottom: 2px solid rgb(0, 17, 255);
+    display: inline;
+}
+.details{
+    color: white;
+    font-family: sans-serif;
+}
+.spinner{
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgba(33, 33, 34, 0.738);
+    box-shadow: 0px 0px 10px 4px black;
+
+}

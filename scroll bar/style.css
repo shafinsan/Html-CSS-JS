@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    background-color: black;
+    text-align: justify;
+    color: white;
+    padding: 2rem;
+    position: relative;
+    font-family: sans-serif;
+}
+.progress{
+    position: fixed;
+    width: 0%;
+    height: 5px;
+    background-color: brown;
+    border-radius: 2px;
+    position: fixed;
+    top: 5px;
+    left: 0;
+    transition: .2s;
+}

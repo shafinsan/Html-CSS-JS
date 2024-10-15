@@ -1,0 +1,89 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: black;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(40, 36, 36, 0.681);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input{
+    width: 80%;
+    height: 20%;
+    -webkit-appearance: none; 
+    appearance: none; 
+    background-color: transparent; 
+}
+input::-webkit-slider-runnable-track{
+    appearance: none;
+    width: 80%;
+    height: 20%;
+    background-color: chartreuse;
+    border-radius: 5px;
+}
+input::-webkit-slider-thumb{
+    -webkit-appearance: none; /* Remove default styles for WebKit browsers */
+    appearance: none; /* Remove default styles */
+    width: 20px; /* Width of the thumb */
+    height: 20px; /* Height of the thumb */
+    background-color: rgb(255, 255, 255); /* Thumb color */
+    border-radius: 50%;
+    margin-top: -2px;
+    
+}
+input::-webkit-progress-value {
+    background: linear-gradient(to right, #e5405e 0%, #ffdb3a 45%, #3fffa2 100%);
+}
+.value{
+    width: 82%;
+    height: 20%;
+    position: relative;
+    top: 20px;
+    margin-right: 9px;
+    margin-left: 4px;
+}
+span{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+span::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: blue;
+    color: white;
+    transform: rotate(45deg);
+    z-index: -1;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%
+}

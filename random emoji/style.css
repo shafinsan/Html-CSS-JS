@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background-color: rgb(25, 19, 19);
+    width: calc(100vw - 50%);
+    height: calc(100vh - 50%);
+    border: 2px solid white;
+    box-shadow: 0px 0px 2rem 0rem white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section p {
+    border: 2px solid red;
+    width: calc(100% - 31%);
+    height: calc(80% - 40%);
+    border-radius: 52%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    background-color: rgba(47, 33, 33, 0.644);
+}
+ @media screen and (min-width:600px) {
+    section p {
+        width: calc(100% - 68%);
+    }
+ }

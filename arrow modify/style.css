@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 200vh;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+.container {
+    height: 100vh;
+}
+
+h1 {
+    margin: auto;
+    width: 90%;
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+p {
+    width: 70%;
+    margin: auto;
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+}
+
+.arow {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transform: translateY(10%);
+    animation: tiktok 1s infinite;
+    margin: auto;
+    transform: translateY(-50%);
+    top: 25%;
+}
+.hidden{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.show{
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+.arow::before {
+    content: "";
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-left: 3px solid rgb(245, 245, 245);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    border-bottom-left-radius: 4px;
+}
+
+@keyframes tiktok {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(7px);
+    }
+}

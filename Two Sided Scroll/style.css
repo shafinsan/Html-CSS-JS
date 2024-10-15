@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.left_side {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35%;
+    height: 100%;
+    transition: all 1s;
+}
+
+.right_side {
+    position: absolute;
+    left: 35%;
+    top: 0;
+    width: 65%;
+    height: 100%;
+    transition: all 1s;
+}
+
+.left_side h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+.game{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-one {
+    background-color: #1d1815;
+}
+
+.game-two {
+    background-color: #405260;
+}
+
+.game-three {
+    background-color: #73a91d;
+}
+
+.game-four {
+    background-color: #223941;
+}
+
+.right_side .img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img1 {
+    background: url(https://images3.alphacoders.com/601/thumb-1920-601862.jpg);
+}
+
+.img2 {
+    background: url(https://images6.alphacoders.com/709/thumb-1920-709832.jpg);
+}
+
+.img3 {
+    background: url(https://images3.alphacoders.com/608/thumb-1920-608887.jpg);
+}
+
+.img4 {
+    background: url(https://images7.alphacoders.com/714/thumb-1920-714040.jpg);
+}
+.up_down_btn{
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+button{
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    pointer-events: all;
+}
+.up:active{
+    scale: 1.2;
+}
+.down:active{
+    scale: 1.2;
+}

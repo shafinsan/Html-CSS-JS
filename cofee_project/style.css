@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Playfair+Display:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #deab5f;
+    --primary-color: #312e2e;
+}
+
+button {
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    background: var(--main-color);
+}
+
+body {
+    background: #100e0f;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding-top: 15px;
+    font-family: sans-serif;
+    flex-wrap: wrap;
+}
+
+li {
+    display: inline;
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    margin-left: 40px;
+    color: #fff;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+li a:hover {
+    border-bottom: 2px solid var(--main-color);
+}
+
+.header {
+    background-image: url("img/pexels-nao-triponez-129207.jpg");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Playfair Display', serif;
+    /*flex*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    margin-top: 2%;
+}
+.main-heading{
+    position: absolute;
+    top:10rem;
+    word-spacing: 10px;
+    font-size: 4rem;
+}
+.primary-heading{
+    position: absolute;
+    bottom: 5rem;
+    font-size: 4rem;
+    white-space: 10px;
+}
+.main-btn{
+    position: absolute;
+    bottom: 2rem;
+    padding: 10px 30px;
+    background: transparent;
+    background: var(--main-color);
+    transform: translateY(60px);
+    margin-top: 20px;
+    text-align: center;
+}
+#our-story{
+    height: 100vh;
+    margin-top: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.img{
+    width: 400px;
+    height: 400px;
+    background-image: url("img/pexels-chitokan-2183027-removebg-preview.png");
+    background-position: center;
+    background-size: cover;
+}
+.title-style{
+    display: flex;
+    align-items: center;
+}
+.title{
+    font-family:'Playfair Display', serif;
+    font-size: 4rem;
+    color: #fff;
+    transform: translateX(-100px);
+}
+.line{
+    transform: translateX(-120px);
+    width: 200px;
+    height: 2px;
+    background: #fff;
+}
+.section-content p,.content-section p{
+    max-width: 500px;
+    color: #fff;
+    font-family: sans-serif;
+    line-height: 20px;
+    margin: 20px 0px;
+}
+.coffee-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.title-two{
+    font-family:'Playfair Display', serif;
+    font-size: 3rem;
+    color: #fff;
+}
+.products{
+    margin-top: 5rem;
+   
+}
+.title-three{
+    font-size: 4rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    margin-left: 10rem;
+}
+.card{
+    border: 2px solid var(--main-color);
+    padding: 0 20px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 4rem;
+}
+.img-one{
+    background: url("img/1.png");
+    
+}
+.img-two{
+    background-image: url("img/2.png");
+}
+.img-three{
+    background: url("img/3.png");
+}
+.card-img{
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -60px;
+    
+}
+.card-title{
+    color: #fff;
+    font-family: sans-serif;
+    margin-top: 50px;
+}
+.card .items{
+    text-align: center;
+}
+.card .items p{
+    color: #fff;
+    margin: 20px 0;
+    font-family: sans-serif;
+}
+.cards{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+footer{
+    margin-top: 25rem;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+    flex-wrap: wrap;
+}
+footer .container{
+    margin: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+span{
+    color: var(--main-color);
+}
+.para{
+    margin-top: 20rem;
+    margin-bottom: 10rem;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+}
+@media only screen and (max-width: 768px) {
+    /* Add your responsive styles here for screens up to 768px wide */
+
+    .main-heading,
+    .primary-heading
+    {
+      font-size: 2.5rem;
+    }
+    .line{
+        display: none;
+    }
+    .section-content{
+        text-align: center;
+        transform: translateY(-5rem);
+    }
+    .title{
+        transform: translateX(11rem);
+        font-size: 2rem;
+    }
+    #our-story{
+        margin-top: 6rem;
+    }
+    .title-two{
+        transform: translateX(9rem);
+        font-size: 2rem;
+        text-align: center;
+    }
+    .coffee-container{
+        margin-top: 5rem;
+        flex-direction: column-reverse;
+        
+    }
+    .img-2{
+        transform: translate(2rem,-2rem);
+        width: 300px;
+        height: 300px;
+    }
+    .content-section{
+        text-align: center;
+    }
+    .content-section button{
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+    .title-three{
+        margin-left: 7.5rem;
+    }
+}
+
+  @media only screen and (max-width: 460px) {
+    .title-three{
+        margin-left: 1rem;
+    }
+    .title{
+        transform: translateX(9rem);
+       
+    }
+    .title-two{
+        transform: translateX(7.5rem);
+    }
+  }
+  @media only screen and (max-width: 372px) {
+    .title-three{
+        margin-left: 1rem;
+    }
+    .title{
+        transform: translateX(5rem);
+       
+    }
+    .title-two{
+        transform: translateX(4rem);
+    }
+  }

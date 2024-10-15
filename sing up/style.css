@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bg_image {
+    width: 100%;
+    height: 100%;
+    background: url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+    flex-wrap: nowrap;
+    max-width: 60%;
+    height: 80%;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    opacity: 1;
+    transition: 0.8s;
+}
+
+.content_active {
+    opacity: 0;
+}
+
+.content h1 {
+    width: 100%;
+    font-size: 4rem;
+    transform: translateY(-80px);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content p {
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+button {
+    position: absolute;
+    bottom: 20px;
+    font-size: 1rem;
+    color: white;
+    font-family: sans-serif;
+    width: 15%;
+    height: 7%;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.84);
+    border-radius: 5px;
+}
+
+.active {
+    animation-name: ac;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes ac {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.89);
+    }
+}
+
+.sign_in {
+    position: absolute;
+    width: 35%;
+    height: 70%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    z-index: -1;
+    transition: 0.5s;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.open {
+    z-index: 0;
+    opacity: 1;
+}
+
+#registrationForm {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.533);
+    color: white;
+    position: relative;
+}
+
+.reg {
+    width: 69%;
+    height: 13%;
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+
+input {
+    height: 27px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+}
+
+.sub {
+    margin-top: 1rem;
+    width: 69%;
+    display: flex;
+    align-items: center;
+}
+
+input[type='submit'] {
+    width: 79px;
+    height: 31px;
+    color: white;
+    background-color: red;
+}
+
+.close {
+    position: absolute;
+    color: red;
+    right: 10px;
+    top: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.success {
+    width: 5rem;
+    height: 2rem;
+    border: 2px solid red;
+    right: 24px;
+    bottom: 15px;
+    position: absolute;
+    width: 8rem;
+    height: 4rem;
+    border: 2px solid rgb(245, 244, 244);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 2rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 1s;
+}
+
+.active_su {
+    opacity: 1;
+    color: white;
+    background-color: rgba(41, 45, 45, 0.856);
+}
+
+label[for="password"],
+label[for="confirmPassword"] {
+    position: relative;
+}
+
+.fa {
+    position: absolute;
+    top: 38px;
+    right: 4px;
+    color: rgba(0, 0, 0, 0.795);
+}
+@media screen and (max-width: 732px){
+    .content h1 {
+        width: 100%;
+        font-size: 2.5rem;
+    }
+    
+    .content p {
+        width: 120%;
+    }
+    button {
+        width: 100px;
+    }
+    .sign_in{
+        min-width: 83%;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .content h1 {
+        width: 100%;
+        font-size: 2rem;
+    }
+    
+    .content p {
+        width: 150%;
+    }
+    button {
+        width: 100px;
+    }
+    .sign_in{
+        min-width: 83%;
+    }
+}

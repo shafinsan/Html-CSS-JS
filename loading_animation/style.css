@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(4, 6, 120);
+}
+.wrapp{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.ball{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: white;
+    margin: 0 8px;
+    animation: animation1 1s ease infinite;
+}
+.ball.one{
+    animation-delay: 0.4s;
+}
+.ball.two{
+    animation-delay: 0.6s;
+}
+.ball.three{
+    animation-delay: 0.8s;
+}
+.ball.four{
+    animation-delay: 1s;
+}
+@keyframes animation1{
+    0%,100%{
+        width: 30px;
+        height: 30px;
+    }
+    50%{
+        width: 20px;
+        height: 20px;
+    }
+}

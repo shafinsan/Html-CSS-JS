@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+    height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+    background-color: aqua;
+}
+
+.toggle-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.toggle-btn span {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    background-color: rgb(212, 64, 101);
+    height: 3px;
+    transition: 1s;
+}
+
+.toggle-btn.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.toggle-btn.active span:nth-child(3) {
+    top: 50%;
+    width: 100%;
+    transform: rotate(-45deg);
+}
+
+.toggle-btn span:nth-child(2) {
+    top: 50%;
+    width: 75%;
+}
+
+.toggle-btn.active span:nth-child(2) {
+    display: none;
+}
+
+.toggle-btn span:nth-child(3) {
+    top: 75%;
+    width: 50%;
+}
+
+.page-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    left: 0;
+    background: liner-gradient(to bottom, rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.4));
+}
+.page-container.active{
+    left: -10px;
+    transform: rotateY(45deg) scale(0.5);
+}
+.overlay{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    background-color: #212121;
+
+}
+@keyframes slide{
+    100%{
+        left: 100%;
+    }
+}
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    z-index: 1;
+}
+
+.page.active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.home {
+    background-image: url("david-marcu-78A265wPiO4-unsplash.jpg");
+}
+
+.project {
+    background-image: url("adam-kool-ndN00KmbJ1c-unsplash.jpg");
+}
+
+.about {
+    background-image: url("goutham-krishna-h5wvMCdOV3w-unsplash.jpg");
+}
+.page .title{
+    font-size: 5rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
+}
+
+.nav-list{
+    position: absolute;
+    right: 10vw;
+    top: 40%;
+    opacity: 0;
+    font-family: sans-serif;
+
+}
+.nav-list.show{
+    opacity: 1;
+}
+li{
+    list-style: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    font-weight: 700;
+    cursor: pointer;
+}
+li:hover{
+    opacity: 0.8;
+    color: blueviolet;
+    transform: translateX(-20px);
+}

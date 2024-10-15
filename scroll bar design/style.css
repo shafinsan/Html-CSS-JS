@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vh;
+    height: 100000px;
+    background:linear-gradient(to left, red,blue);
+}
+::-webkit-scrollbar{
+    border: 2px solid rgb(0, 0, 0);
+    background:linear-gradient(to left, rgb(107, 152, 120),blue) ;
+}
+::-webkit-scrollbar-thumb{
+    color: blue;
+    width: auto;
+    height: 200px;
+    border-radius:20px ;
+    background-color: black;
+}

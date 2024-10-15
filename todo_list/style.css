@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blueviolet;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 400px;
+    padding: 2rem;
+}
+
+input {
+    width: 100%;
+    display: block;
+    outline: none;
+    padding: 8px;
+    margin-bottom: .5rem;
+}
+
+.todo {
+    width: 99.8%;
+    height: 2rem;
+    border-left: 4px solid rgb(34, 187, 57);
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+.delete {
+    color: blueviolet;
+    font-weight: bold;
+    cursor: pointer;
+    padding-right: 5px;
+    font-size: 1.2rem;
+}
+
+.massage_container {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2rem;
+    background-color: white;
+    visibility: hidden;
+    padding: 20px;
+    transform: translate(0);
+    transition: transform 2s ease;
+}
+
+.sucess {
+    transform: translate(100px);
+    visibility: visible;
+    background-color: rgb(233, 71, 89);
+    color: white;
+}
+
+.err {                                   
+    transform: translate(100px);            
+    visibility: visible;                    
+    background-color: rgb(34, 187, 51);
+    color: white;                      
+}                                         

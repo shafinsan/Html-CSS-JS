@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+.img_container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+   
+}
+.img{
+    background: url("img/thumb-1920-597965.jpg");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+.paly_icon{
+    background: url("img/play.png");
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 100px;
+    border: 3px solid rgba(225, 159, 140, 0.903);
+    width: 120px;
+    height: 120px;
+    box-shadow: 0px 0px 10px 5px rgba(225, 159, 140, 0.903);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    transform: translateY(0);
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes bounce{
+    0%,100%{
+        transform: translateY(0px);
+        animation-timing-function: ease-in;
+    }
+    50%{
+        transform: translateY(20px);
+        box-shadow: 0px 0px 10px rgba(225, 159, 140, 0.903);
+        animation-timing-function: ease-in-out;
+    }
+}
+.trailer_Container{
+    background-color: rgba(12, 12, 12, 0.94);
+    border: 2px solid red;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .5s;
+    visibility: hidden;
+
+}
+.active{
+    opacity: 1;
+    visibility: visible;
+}
+video{
+   max-width: 90%;
+   max-height: 80%; 
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+  
+}
+@media (max-aspect-ratio:16/9) {
+    video{
+        width: auto;
+        height: 90%;
+    }
+}
+@media (min-aspect-ratio:16/9) {
+    video{
+        width: 90%;
+        height: auto;
+    }
+}
+.closeBtn{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: red;
+    font-size: 2rem;
+}
