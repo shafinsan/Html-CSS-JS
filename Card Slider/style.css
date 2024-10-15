@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main_container {
+    width: 70vw;
+    height: 400px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    border: 2px solid red;
+    height: 330px;
+    width: 220px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.image_conatainer {
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(72, 72, 235);
+    border-radius: 10%;
+    position: relative;
+}
+
+.overlay {
+    width: 29px;
+    height: 30px;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+
+    background-color: rgb(72, 72, 235);
+}
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    bottom: -20px;
+    border-top-right-radius: 10px;
+    background-color: white;
+
+    right: 0.000px;
+
+}
+
+.image {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.name {
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    transform: translateY(calc(100% + 30px));
+}
+
+.details_container {
+    transform: translateY(calc(100% - 70%));
+}
+
+.details {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: rgb(72, 72, 235);
+    color: white;
+    border-radius: 4%;
+    font-family: sans-serif;
+    font-size: small;
+    margin: auto;
+}
+
+.btn_container {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin: 10px;
+    width: 70px;
+}
